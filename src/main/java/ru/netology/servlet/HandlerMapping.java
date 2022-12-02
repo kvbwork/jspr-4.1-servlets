@@ -1,5 +1,7 @@
 package ru.netology.servlet;
 
+import org.springframework.stereotype.Component;
+
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -9,6 +11,7 @@ import java.util.regex.Pattern;
 
 import static java.util.Optional.ofNullable;
 
+@Component
 public class HandlerMapping {
     private final Map<String, Map<String, RequestHandler>> staticPathHandlers;
     private final Map<String, List<Map.Entry<Pattern, RequestHandler>>> patternPathHandlers;
